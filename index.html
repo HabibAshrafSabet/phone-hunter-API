@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-10 ">Find your phone</h1>
+    </header>
+    <main>
+        <section class="max-w-screen-2xl mx-auto mt-10">
+            <div class="bg-slate-200 rounded-full text-center mb-10">
+                <input id="search-field" type="text" placeholder="Search Here" class="my-6 rounded-xl w-[35%] px-6 py-3">
+                <button onclick="searchHandle()" class="btn btn-accent rounded-xl">Search</button>
+            </div>
+            <div id="loading-spinner" class="text-center hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div id="phone-area" class="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3 gap-5 ">
+                  
+            </div>
+            <div id="show-all-btn" class="hidden text-center my-10">
+                <button onclick="clickShowAllBtn()" class="btn btn-accent ">Show All</button>
+            </div>
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+
+        <script src="index.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
